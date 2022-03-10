@@ -1,0 +1,54 @@
+<!-- Colors In CSS -->
+<!-- 
+There are three ways of defining Colors in CSS
+1) Color by name:
+color: blueviolet;
+ The first method of defining the colour in the CSS is directly writing the particular colour name. Its example is #firstPara below
+2) Color by rgb value:
+color: rgb(0, 55, 255);
+    The second way of defining colour is with the help of ‘RGB,’ as shown in #secondPara. The RGB colour range varies from 0 to 255. Here, we treat RGB as a function and pass the values in that function for red, green and blue. As we give different values in the function, it creates various combinations of different colours combined with red, green, and blue. 
+3) Color by hex value:
+color: #ff4532;
+    The third way is by giving hex colours. However, it is very rarely used.
+    here can see the “#” character. It is used to give the hexadecimal value of any colour. You will find various references on the Internet to generate the hexadecimal values of different colours.
+
+Let us now understand the working of hex colours. Hex colour is also a kind of RGB. For example, let’s take one hex value as ‘#60DCA4’, here 60 is red of RGB, DC is green of RGB, and A4 is the blue of RGB. The same value in RGB for this colour would be something (96, 220,164).
+Colour picker is one of the most interesting things that you will find in VS code by using any of the colour types. You can select any of the colours from the colour picker, and the values will automatically get set by the colour picker for that particular colour type.
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colors</title>
+    <style>
+        #firstPara{
+            color: blueviolet;  /* Color by name */
+        }
+        #secondPara{
+            color: rgb(0, 55, 255); /* Color by rgb value */
+        }
+        #thirdPara{
+            color: #ff4532; /* Color by hex value */
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Fonts</h3>
+
+    <h2>This is my First Box</h2>
+    <p id="firstPara">This is paragraph of My First Box</p>
+
+    <h2>This is my Second Box</h2>
+    <p id="secondPara">This is paragraph of My Second Box</p>
+
+    <h2>This is my Third Box</h2>
+    <p id="thirdPara">This is paragraph of My Third Box</p>
+
+    The first method of defining the colour in the CSS is directly writing the particular colour name. Its example is
+
+</body>
+</html>

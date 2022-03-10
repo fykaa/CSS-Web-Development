@@ -1,0 +1,139 @@
+<!-- SELECTORS IN CSS -->
+<!-- 
+Here, we are going forward to learn different selectors in CSS. 
+CSS selectors are used to select any content you want to style. These are the part of CSS ruleset. CSS selectors select HTML elements according to its id, class, type, attribute, etc.
+
+CSS Selectors are used to target HTML elements.
+Selectors make it easy for us to easily target single/multiple HTML elements in the markup.
+We will see four types of CSS Selectors:
+
+-CSS element Selector
+-CSS id Selector
+-CSS class Selector
+-The CSS grouping Selector
+
+As discussed in one of the previous videos, the basic syntax of writing the CSS is-
+p {color: blue;}
+In the example above, ‘p’ is the selector. It will convert all the paragraph into blue.
+
+
+
+
+#ELEMENT SELECTOR:
+
+<h3>CSS Selectors</h3>
+             <p id="firstPara">This is a simple paragraph to demonstrate css selectors</p>
+             <p id="secondPara" class="redElement bgBlue">This is a another simple paragraph to demonstrate css selectors</p>
+<div>
+       <p>This is yet another simple paragraph inside div to demonstrate css selectors</p>
+</div>
+The above code will convert all the three paragraphs into red color.
+
+
+#CLASS SELECTOR:
+If we want to select a paragraph and assign multiple properties to it, then we can use Class Selector. Let us understand with an example-
+
+<style>
+           .redElement{
+                   Color: red;
+                       }
+.bgBlue{
+            Background-color: blue;
+}
+</style>
+
+<body>
+    <h3>CSS Selectors</h3>
+    <p>This is a simple paragraph to demonstrate css selectors</p>
+    <p id="secondPara" class="redElement bgBlue">This is a another simple paragraph to demonstrate css selectors</p>
+    <div>
+        <p>This is yet another simple paragraph inside div to demonstrate css selectors</p>
+    </div>
+</body>
+
+-This will convert only the second paragraph with class “redElement” and “bgBlue” as shown below-
+
+
+# ID SELECTOR:
+If we want to select the only paragraph to show any change, then we will be using ID selector(@because ID is unique for each para). Let us understand with an example-
+<style>
+    #firstPara{
+                color: green;
+              }
+</style>
+
+
+# GROUPING SELECTOR:
+Grouping Selector is used when we have to make changes in more than one element. Let us understand with an example. Suppose we have two elements footer and span and we want the same changes in both the elements. Then we can do the following-
+
+<style>
+            footer, span{
+                 Background-color: pink;
+                        }
+</style>
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+
+        /* Element selector */
+        p{
+            border: 2px solid red;
+        }
+
+        /* ID selector */
+        #firstPara {
+            color:
+                pink;
+            background-color:
+                brown;
+        }
+
+        /* Class selector */
+        .redElement {
+            color:
+                red;
+        }
+
+        .bgYellow {
+            Background-color:
+                rgb(128,
+                    255,
+                    0);
+        }
+        
+        /* Grouping selector */
+
+        footer,span {
+            background-color: wheat;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>CSS Selectors</h3>
+    <!--ELEMENT SELECTOR-->
+    <p>This shows Element SELECTOR</p>
+    <!--ID SELECTOR-->
+    <p id="firstPara">This is FIRST paragraph to demonstrate ID selectors</p>
+    <!--CLASS SELECTOR-->
+    <p class="redElement">This is SECOND paragraph to demonstrate class selectors</p>
+    <div>
+        <p class="bgYellow">This is yet another simple paragraph inside div to demonstrate class selectors</p>
+    </div>
+    <!--GROUPING SELECTOR-->
+    <footer>This is an example of Grouping Selecctor for the group we named as Footer and Span</footer>
+    <span>This is an example of Grouping Selecctor for the group we named as Footer and Span</span>
+</body>
+
+</html>

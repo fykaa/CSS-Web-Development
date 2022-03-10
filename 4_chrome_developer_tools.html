@@ -1,0 +1,58 @@
+<!--  Using Chrome Developer Tools -->
+
+<!--
+Here we are going to use the developer tools provide by chrome.
+
+After running your code, if you will right-click anywhere in the browser then you will see an inspect element option. By clicking on it you will be able to see the original code. From here you can make some changes in the webpage and can observe it. However, it does not change the original code on your server. Developer Tools are used to make any changes into your code and see the instant effect on your web page. This change is not a permanent.
+
+But if you like any change made in the developer tools, you can do the same in original file in VS code and refresh the page. That particular change will now reflect back permanently. Inspect Element allows us to make and view the changes in any of the websites present all over the world
+
+I have explained that how these changes are only reflecting on your local server. When you will reload that page again, all the things will set back to their default set up. In this way, you can use the developer tools of chrome. 
+
+User-Agent Stylesheet:
+
+1) By default, chrome sets some property for some elements and store some default values in it. So the browser by default styles some element according to it and that styling is particularly known as user's agent style sheet. Basically it is showing the default value of browser that previously what changes were there and what changes you have made now on your page. 
+
+2) There is also a console section where you can write JavaScript code. 
+3) Sources section contains all the source codes that you have written. 
+4) The most important thing in this tutorial was elements that we have already discussed. We can directly change our styles using CSS directly.
+
+# Some tips while defining a color class:-
+
+Do not directly use the name of the color as the class name instead use:
+-colorprimary 
+-colorsuccess
+-colorwarning
+As writing these looks more professional and also helps in future to maintain our codes.
+
+So, I believe you must have learned something about Developer Tools and how to use them. The more practicing and playing around Inspect Elements will help you in learning faster.
+
+
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Tools</title>
+    <style>
+        p{
+            color:aqua;
+            font-style: oblique;
+            background-color: brown;
+        }
+        .bgPrim{
+            background-color:sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <h3 class="bgPrim">Developer Tools Tutorial</h3>
+    <p>This tutorial will be working on Chrome Browser</p>
+
+</body>
+</html>

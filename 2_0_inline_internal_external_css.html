@@ -1,0 +1,58 @@
+<!--  Inline, Internal & External CSS | Web Development  -->
+
+<!--  
+#INLINE CSS
+-Inline CSS allows you to apply a unique style to one HTML element at a time. You can assign the Inline CSS to a specific HTML element by using the style attribute with any CSS properties defined within it. Let us try to understand this with an example.
+
+<p style="color: red;">Here we used Inline CSS to add these colors to our line</p>
+
+You must be thinking this is the best way to add CSS on the website but I will let you know that it is not the best method to style your HTML. If you add too much Inline CSS, then your HTML will become too messy to understand for you.
+
+Internal CSS is used to define a style tag for a single HTML page. It is defined in the <head> section within a <style> element. Let us understand the External CSS with the help of an example.
+
+<head>
+     <style>
+              p{
+                   color: purple;
+                 }
+     <style>
+<head>
+
+One important point to note here is, Inline CSS is given more priority than Internal CSS.
+
+External CSS is mostly used when you want to make changes on multiple pages. It is an ideal condition because it facilitates you to change the look of the entire website by changing just one file. We will add the stylesheet in the <head> section using <link> tag.
+<head>
+       <link rel= “stylesheet” href= “externalfile.css”>
+<head>
+Then in externalfile.css file, we can write our CSS-
+p{
+       Color: greenyellow;
+}
+
+PRIORITY: EXTERNAL CSS > INLINE CSS > INTERNAL CSS
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline CSS Tutorial</title>
+    <!--1) INTERNAL CSS-->
+        <!-- <style>
+            p{color: purple;}
+        </style> -->
+    <!--2) EXERNAL CSS-->
+        <link rel="stylesheet" href="externalfile.css">
+</head>
+<body>
+    <h3>This is INLINE CSS Tutorial</h3>
+    <!--3) INLINE CSS-->
+        <!-- <p style="color: red;">Here we used Inline CSS to add these colors to our line</p> -->
+    <p>Here we used Inline CSS to add these colors to our line</p>
+</body>
+</html>
+
+<!-- The point here to remember is that whether it is the Internal CSS or the External CSS, whichever is written after, gets the priority. But if you want that first one should get priority, so you can add "!important" after it. The result will be, it will get the most priority of all.
+
+So I hope you must have understood all the three types of CSS used to style our website. From the next tutorials, we will see some more interesting properties about CSS. Till then stay with the tutorials and keep practicing whatever is taught till now. -->
