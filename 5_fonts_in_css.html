@@ -56,14 +56,22 @@ There are various other font properties. Most of the important ones are covered 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Fonts</title>
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> <!--Here we are importing a web font from Google STEPS:
+    1) search Google fonts
+    2) choose a font and copy its stylesheet link here in the head
+    3) Now use the font-family name wherever required -->
     <style>
         p{
             font-family: 'Ubuntu','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size:33px; 
-            line-height: 1.3em ;
+            /* these are web saved fonts , hence pre-installed in the vsc . 
+            To check more such web-saved fonts , google CSS Font stack 
+            Above example Specifies a prioritized list of font family names or generic family names. A user agent iterates through the list of family names until it matches an available font that contains a glyph for the character to be rendered. */
+            font-size:33px; /* 1/96th of inch*/
+            line-height: 1.3em ; /* em = x * parent font size  i.e. here 1.3 times of parent font size */
         }
         span{
+            font-family: 'Times New Roman', Times, serif;
             font-weight:bold ;
             font-style:italic;
         }

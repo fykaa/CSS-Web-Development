@@ -65,61 +65,105 @@ However, now we do not use the float and clear proper
 ty much. Instead, we use the properties like flexbox. But then too the concepts of float and clear should be known to you. In the upcoming tutorials, we will see more different layouts like navigation bars etc. Till then stay tuned with the tutorials.
 
  -->
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLOAT AND CLEAR</title>
+
+
     <style>
-        .container{
-            width: 900px;
-            border: 3px solid purple;
-            background-color: rgb(250, 226, 205);
-            margin: 33px auto;
+        * {
+            box-sizing: border-box;
         }
-        .item{
-            border: 3px solid grey;
-            margin: 12px 3px;
-            padding: 12px 3px;
-            background: rgb(248, 238, 238);
+
+        .container {
+            width: 1050px;
+            border: 9px solid purple;
+            background-color: rgb(145, 110, 80);
+            margin: auto;
+            border-radius: 20px;
+        }
+
+        .item {
+            border: 5px solid rgb(201, 30, 30);
+            border-radius: 1cm;
+            margin: 20px 33px;
+            padding: 12px 15px;
+            background: rgb(203, 113, 113);
+        }
+
+        #fruit {
+        
+            float: left;
+            width: 40%;
+
+        }
+
+        #computer {
+
+            float: left;
+            width: 45%;
+
+
+        }
+
+        #stationary {
+            clear: both;    /*This ensures no overlapping by both right and left floats*/
+            /* float: left; */
+            width: 95% 
+        }
+
+        p, h1, div{
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1> Welcome to my store </h1>
+
+        <h1>Welcome to my store </h1>
+
         <div id="fruit" class="item">
+
             <h3>Fruits</h3>
-            <p id="fruitpara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
                 quibusdam explicabo, porro magnam quas sint enim cumque minima odit cupiditate ex itaque, eaque
                 distinctio sed ipsam totam, nihil tenetur. Recusandae. Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Aspernatur fugiat iusto vel. Qui, veniam nam, enim dolore deleniti dignissimos
+                adipisicing elit. Asperna Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis delectus
+                at porro expedita sed eum a neque itaque temporibus laudantium.
+                tur fugiat iusto vel. Qui, veniam nam, enim dolore deleniti dignissimos
                 veritatis tenetur animi sunt voluptatem laboriosam, nihil inventore molestias totam. Quas ducimus
                 quibusdam quaerat necessitatibus.</p>
         </div>
+
         <div id="computer" class="item">
+
             <h3>Computer</h3>
-            <p id="computerpara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
                 quibusdam explicabo, porro magnam quas sint enim cumque minima odit cupiditate ex itaque, eaque
                 distinctio sed ipsam totam, nihil tenetur. Recusandae. Lorem ipsum dolor sit amet consectetur
                 adipisicing elit. Rerum commodi vitae exercitationem necessitatibus laboriosam corporis dicta, eveniet
                 architecto reprehenderit eum id repudiandae deleniti fugiat fugit inventore ea dolorum neque amet nulla
                 vero culpa. Accusamus.</p>
         </div>
+
         <div id="stationary" class="item">
+
             <h3>Stationary</h3>
-            <p id="stationarypara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
-                quibusdam explicabo, porro magnam quas sint enim cumque minima odit cupiditate ex itaque, eaque
-                distinctio sed ipsam totam, nihil tenetur. Recusandae.</p>
-        </div>
-        <div id="glasses" class="item">
-            <h3>Stationary</h3>
-            <p id="glassespara" class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
                 quibusdam explicabo, porro magnam quas sint enim cumque minima odit cupiditate ex itaque, eaque
                 distinctio sed ipsam totam, nihil tenetur. Recusandae.</p>
         </div>
     </div>
 </body>
+
 </html>

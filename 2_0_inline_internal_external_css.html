@@ -39,19 +39,22 @@ PRIORITY: EXTERNAL CSS > INLINE CSS > INTERNAL CSS
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inline CSS Tutorial</title>
     <!--1) INTERNAL CSS-->
-        <!-- <style>
-            p{color: purple;}
-        </style> -->
+        <style>
+            p{
+                color: purple;
+            }
+        </style>
     <!--2) EXERNAL CSS-->
         <link rel="stylesheet" href="externalfile.css">
 </head>
 <body>
     <h3>This is INLINE CSS Tutorial</h3>
     <!--3) INLINE CSS-->
-        <!-- <p style="color: red;">Here we used Inline CSS to add these colors to our line</p> -->
+        <p style="color: red;">Here we used Inline CSS to add these colors to our line</p>
     <p>Here we used Inline CSS to add these colors to our line</p>
 </body>
 </html>
+<!-- Priority to INLINE> external/internal based on which was last -->
 
 <!-- The point here to remember is that whether it is the Internal CSS or the External CSS, whichever is written after, gets the priority. But if you want that first one should get priority, so you can add "!important" after it. The result will be, it will get the most priority of all.
 

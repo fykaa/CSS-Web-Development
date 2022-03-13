@@ -1,8 +1,101 @@
-<!-- Position property absolute, relative, fixed and sticky in CSS -->
+<!-- Styling Links & Buttons -->
 <!-- 
-After going through this tutorial, you will master the differences in the positioning of the elements. So, without wasting any time, let's start discussing the CSS positioning-related properties.
+In this tutorial, we are going to see how to style and design buttons in CSS and what pseudo-selectors are.
 
+We will now design two types of buttons. One will be a normal button and another will be linking to some website. The codes of both are as below-
 
+<a href="https://yahoo.com" class="btn">Read more</a>
+<button class="btn">Contact us</button>
 
+You will observe that both the buttons will look different. Therefore, to make it look little attractive, we will do some styling in it with CSS.
+.btn{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            background-color: crimson;
+            padding:6px;
+            border: none;
+            cursor:pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
 
+To remove the underline in the link part we have to style the anchor tag as-
+  a{
+            text-decoration: none;
+            color: black;
+        }
+#PSEUDO SELECTORS
+
+Let us now see what Pseudo Selectors are. A pseudo class is used to define a special state of an element.
+1) Hover is used to change the color of text or background of a button as soon as you hover that part. The code for this is as below.
+ a:hover{
+            color: rgb(5, 0, 0);
+            background-color: rgb(221, 166, 38);
+        }
+2) The next Pseudo selector is Visited. As soon as you visit the anchor tag button and click the link mentioned, it changes its color. To apply this property, write the code as follows-
+a:visited{
+            background-color: yellow;
+}
+3) The next selector is Active. If you visit any button, and click it, it becomes active and showcases with different properties. The code for this is-
+  a:active{
+            background-color:darkblue;
+        }
+Similarly we can put pseudo selector in the ‘btn’ class as well. To apply it write the code as follows-
+.btn:hover{
+            color:darkgoldenrod;
+            background-color:rgb(223, 245, 201);
+            border: 2px solid black;
+        }
+To learn more about different buttons and pseudo selectors you can visit the website called Bootstrap. There you will find more buttons and properties related to them. You can see and practice some of the properties mentioned there and increase your skills. Till then you can visit the previous tutorials and practice all the things taught till now. In the upcoming tutorials, we are going to learn more and more CSS properties and make a website look more attractive from the scratch.
  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Links and Pseudo-Selectors</title>
+
+    <style>
+        /* To remove the underline in the link part we have to style the anchor tag as- */
+        a{
+            text-decoration: none;
+            color: red;
+        }
+        a:hover{
+            color: white;
+            background-color: aqua;
+        }
+        a:visited{
+            color: darkblue;
+        }
+        .container{
+            border: 3px solid violet ;
+            background-color: rebeccapurple;
+            padding: 20px;
+            margin: auto;
+            width: 544px;
+        }
+        .btn{
+            color: orange;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            background-color: green;
+            padding:6px;
+            border: 3px solid blue;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container"><h1>This is my heading</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque temporibus, voluptatibus consequuntur quia quis culpa dignissimos maiores doloribus atque, dolorem tempore saepe obcaecati beatae ipsum rem iste unde ab est.
+    </div>    
+    
+    <a href="https://yahoo.com"> Contact karlo! </a><br><br><br>
+    <button class="btn">Read More...</button>
+</body>
+</html>
