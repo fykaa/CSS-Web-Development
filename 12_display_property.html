@@ -1,0 +1,134 @@
+<!--CSS Display Property 
+
+    In this tutorial, we are going to learn about CSS Display Property. The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.
+
+Let us style the image and heading with some CSS- 
+    img {
+        margin: auto;
+        display: block;
+        width: 34px;
+    }
+
+    h3 {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0px;
+    }
+By inspecting both the elements in the Chrome browser, we see that the image is an inline element and the h3 heading is the block element. Our objective is to bring all the elements to the center of the webpage. We can achieve it by adjusting the width of the block element i.e. the heading. The respective code of the following is-
+    header {
+            border: 2px solid red;
+            margin: auto;
+            width: 1200px;
+        }
+The display of “img” is inline and therefore, to make it come to center, we have to set the property display as block as follows-
+img {
+            margin: auto;
+            display: block;
+            width: 34px;
+        }
+
+The next problem which arises is that when we stretch the full width of the page, the text in the heading moves towards left. So to move it towards the center, we can set the property of text-alignment as center.
+
+Display inline means it will take the space according to the size of the element. 
+Display block means we can set its width and by margin manually.
+
+Now suppose we want to make an element inline as well as customize its width too, then in that case we can use inline-block. 
+
+To understand it, first we will add three divs with some texts in it and then style it. To appear those as a box, we can take the help of container and box class. We can style the box element as
+.box {
+            border: 4px solid black;
+            background-color: grey;
+            margin: 4px 0px;
+            padding: 23px;
+            width: 33%;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+The inline-block property here allows us to change the width of inline elements also. To ensure that all the three blocks come in a single line, we can use the property box-sizing. It ensure that the width we provide is not changed including padding and margin.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            margin: auto;
+            display: block;
+            width: 34px;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+        }
+
+        header {
+            border: 2px solid red;
+            margin: auto;
+            width: 1200px;
+        }
+
+        .box {
+            border: 4px solid black;
+            background-color: grey;
+            margin: 4px 0px;
+            padding: 23px;
+            width: 33%;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+
+        .container {
+            margin: auto;
+            width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="top">
+        <img src="https://media.istockphoto.com/photos/astronaut-lying-in-the-meadow-picture-id1304263738?b=1&k=20&m=1304263738&s=170667a&w=0&h=LZ99BV0qvF5GsYw3mqyJcN5lNZPvJ5jaKcDs9dMvzmg="
+            alt="image not found">
+        <h3>Welcome to Blog</h3>
+    </header>
+    <div class="container">
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, harum ipsam aliquid deleniti, vitae
+                labore cum laudantium a blanditiis est voluptates dolorum consequuntur. Aliquam corporis, fuga
+                consectetur rerum molestias consequatur tempora natus sed laborum recusandae fugit harum soluta
+                inventore enim. Aspernatur aperiam cum reprehenderit!</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, harum ipsam aliquid deleniti, vitae
+                labore cum laudantium a blanditiis est voluptates dolorum consequuntur. Aliquam corporis, fuga
+                consectetur rerum molestias consequatur tempora natus sed laborum recusandae fugit harum soluta
+                inventore enim. Aspernatur aperiam cum reprehenderit!</p>
+        </div>
+
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, harum ipsam aliquid deleniti, vitae
+                labore cum laudantium a blanditiis est voluptates dolorum consequuntur. Aliquam corporis, fuga
+                consectetur rerum molestias consequatur tempora natus sed laborum recusandae fugit harum soluta
+                inventore enim. Aspernatur aperiam cum reprehenderit!</p>
+        </div>
+    </div>
+</body>
+
+</html>

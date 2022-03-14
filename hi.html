@@ -5,43 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <style>
-        #hel{
-            background-color: rgb(129, 63, 63);
-            height: 100px;
-            width: 450px;
-            border-width: 10px;
-            /* border-color: palevioletred; */
-            border-style: solid;
-            border-radius: 1.4em;
-            border-left-color: aqua;
-            border-right-color: yellow;
-            border-left-width: 5px;
-            border-top-width: 43px;
-            border-top-color: violet;
-            
+        .navbar{
+            background-color: black;
+            border-radius: 200px;
             
         }
-        #firstPara{
-            background-color: red;
-            height: 200px;
-            width: 200px;
-            /* border: 10px green solid; */
-
-            border-width: 10px;
-            border-color: green;
-            border-style: solid;
-            border-radius: 50px;
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
         }
+        .navbar li a{
+            padding: 3px 3px;
+            color: white;
+            text-decoration: none;
+        }
+        .navbar li a:hover{
+            color: red;
+        }
+        .search{
+            float: right;
+        }
+        .navbar{
+            overflow: auto;
+        }
+        .navbar input{
+            border-radius: 300px;
+            border: 22px solid black;
+            height: 40px;
+            
+        }
+        
     </style>
 </head>
 <body>
-<div><p id="hel">Hi Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, cumque quas dicta deleniti suscipit, corporis aperiam officia nobis optio nihil, earum voluptatem natus minus non quisquam est rem ab perferendis laborum fuga iste alias.</p></div>
-<p id="firstPara">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias voluptate voluptates architecto similique fugiat esse, amet nemo aliquam culpa laboriosam facere, deserunt exercitationem totam neque cum accusantium consequatur obcaecati illum. Accusantium, assumenda.
-</p>
-    
-
-
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Search this website">
+                </div>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>
