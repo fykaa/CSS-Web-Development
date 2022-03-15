@@ -46,7 +46,7 @@ To understand it, first we will add three divs with some texts in it and then st
         }
 The inline-block property here allows us to change the width of inline elements also. To ensure that all the three blocks come in a single line, we can use the property box-sizing. It ensure that the width we provide is not changed including padding and margin.
 -->
-
+<!-- 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -131,4 +131,91 @@ The inline-block property here allows us to change the width of inline elements 
     </div>
 </body>
 
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY property</title>
+    <link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            /* margin: auto; */
+            /* width: 120px; */
+            background-color: bisque;
+            border: 2px solid black;
+        }
+        img{
+            width: 50px;
+            margin: auto;
+            display: block;
+        }
+        h3{
+            font-family: 'BhuTuka Expanded One', cursive;
+            margin: 0px;
+            text-align: center;
+            
+        }
+        .box{
+            border: 2px solid black;
+            background-color: grey;
+            margin: 10px;
+            padding: 20px;
+            float: right;
+
+            width: 31%;
+            /* display: inline; this code created a problem because is div ke andar kuch block elements bhi the , toh making this totally inline caused problem hence we will set this to inline block */
+            display: inline-block;
+        }
+
+        .container{
+            overflow: auto;
+            border-radius: 10px;
+            border-color: green;
+            border: 2px solid;
+            background-color: aquamarine;
+            margin: 13px;
+            width: 1491px;
+        }
+    </style>
+</head>
+<body>
+    <header class="top">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Gull_portrait_ca_usa.jpg/450px-Gull_portrait_ca_usa.jpg" alt="internetn pls">
+        <h3>Welcome to my Blog</h3>
+
+        
+    </header>
+    <div class="container">
+        <div class="box"><h4 class="heading">Heading 1</h4>
+            <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod a quisquam animi atque autem non vitae rerum. Optio quae fugit eum rem porro! Voluptate fugiat doloremque, esse dolorem voluptas natus?</p></div>
+        <div class="box"><h4 class="heading">Heading 2</h4>
+            <p >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod a quisquam animi atque autem non vitae rerum. Optio quae fugit eum rem porro! Voluptate fugiat doloremque, esse dolorem voluptas natus?</p>
+            </div>
+        <div class="box"><h4 class="heading">Heading 3</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod a quisquam animi atque autem non vitae rerum. Optio quae fugit eum rem porro! Voluptate fugiat doloremque, esse dolorem voluptas natus?</p></div>
+        </div>
+</body>
 </html>
+
+
+<!--
+    LEARNINGS:
+    
+    using DISPLAY: inline;
+    you can switch from block to inline elements and vice versa
+    
+    you can always set width for a BLOCK ELEMENT, not for a INLINE ELEMENT, because inline ka matlab hai jitni jagah milti hai utni lelo
+    
+    Header is Block element isliye poori space leliya
+    
+img is inline
+h3 is as block element -->
