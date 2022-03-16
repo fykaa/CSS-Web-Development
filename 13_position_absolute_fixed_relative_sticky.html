@@ -1,0 +1,127 @@
+<!-- Position absolute, relative, fixed and sticky in CSS
+
+With the help of CSS, you can put your HTML elements at the position of your choice. After going through this tutorial, you will master the differences in the positioning of the elements.
+
+Types Of Position Property :
+There are five types of position property :
+ -static
+ -relative
+ -absolute
+ -fixed
+ -sticky
+
+position: static;
+It is the default position of HTML elements.
+
+position: relative;
+It is used when we need to position an HTML element relative to its normal position.
+We can set the top, right, bottom, and left properties that will cause the element to adjust away from the normal position.
+Example: We have used the below CSS to design four boxes
+The default position of all the boxes is static. Now, we will change the position from static to relative of box 3. Here is the CSS used :
+<style>
+        #box3 {
+            position: relative;
+            top: 34px;
+            left: 34px;       
+ }
+</style>
+
+You can see in the image given below that box3 has shifted 34px away from the top and left side relative to its normal position.
+
+position: absolute;
+An element with the absolute position will move according to the position of its parent element.
+In the absence of any parent element, the HTML element will be placed relative to the page.
+Now, we have changed the position of box3 from relative to absolute. Here is the CSS used :
+#box3 {
+            position: absolute;
+            top: 34px;
+            left: 34px;        
+            }
+        .container{
+            border: 2px solid black;
+            background-color: khaki;
+            height: 3444px;
+        }
+You can see in the image given below that the box3 has moved to the left side of the page.
+
+position: fixed;
+An element with position:fixed; will remain stuck to a specific position even after the page is scrolled.
+This position property is used when we want to keep an HTML element at a fixed spot no matter where on the page the user is.
+
+Notice the box fixed at the top right corner of the page in the image given below. Here is the CSS used :
+#box3{
+            position: fixed;
+            right: 4px;
+        }
+
+position: sticky;
+It is a hybrid of relative and fixed position.
+An HTML element with position:sticky; will just sit there until a given position offset is met.
+Use the CSS given below to get a better understanding of the sticky element.
+ #box3 {
+        position: sticky;
+        top: 3px;  
+            }
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .box{
+            border: 2px solid red;
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+        /* relative: Positions the element relative to its normal positon and will leave a gap at its normal position*/
+        #box1{
+            position: relative;
+            top: 34px;
+            left: 34px;
+        }
+        /* absolute: Positions the element relative to the positon of its first parent*/
+        #box2{
+            position: absolute;
+            top: 34px;
+            left: 34px;
+        }
+        /* fixed: Positions the element relative to the browser window; */
+        #box3 {
+            position: fixed;
+            right: 4px;
+        }
+        /* sticky: Positions the element relative to the users scroll position */
+        #box4{
+            position: sticky;
+            top: 3px;  
+        }
+        .container{
+            border: 2px solid black;
+            background-color: khaki;
+            height: 400px;
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="box" id="box1">Box 1 relative wrt normal</div>
+    <div class="box" id="box2">Box 2 absolute wrt screen</div>
+    <div class="box" id="box3">Box 3 fixed</div>
+    <div class="box" id="box4">Box 4 sticky</div>
+</div>
+    
+</body>
+</html>
