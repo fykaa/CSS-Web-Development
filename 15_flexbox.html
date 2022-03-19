@@ -1,0 +1,184 @@
+<!-- Flexbox -->
+<!-- In this tutorial we are going to learn about the flexbox property of CSS. 
+    
+    The Flexbox Module was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface with powerful alignment capabilities.
+
+    CSS Flexbox is a better way to align items into a container    
+    Flexbox = Flexxible + Box
+
+    We create flexbox using display none
+
+    # flex container - body of flexbox
+    # flex item - items in container
+    # main axis - horizontal length of container
+    # cross axis - vertical length of container
+    # main start - left vertical border
+    # cross start - top horizontal border
+    # main size - horizontal length of item
+    # cross size - vertical length of item
+    # main end - left vertical border
+    # cross end - left vertical border
+
+-->
+<!-- 
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Flexbox Tutorial</title>
+        <style>
+            .container{
+                height: 544px; 
+                width: 100%;
+                border: 2px solid black;
+                display: flex; /* Initialize the container as a flex box */
+                
+                /* Flex properties for a flex container */
+    
+                /* flex-direction: row; (Default value of flex-direction is row) */
+                /* flex-direction: column;
+                flex-direction: row-reverse;
+                flex-direction: column-reverse; */
+                
+    
+                /* flex-wrap: wrap; (Default value of flex-direction is no-wrap) */
+                /* flex-wrap: wrap-reverse; */
+    
+                /* This is a shorthand for flex-direction: and flex-wrap: ;; */
+                /* flex-flow: row-reverse wrap; */ 
+    
+                /* justify-content will justify the content in horizontal direction */
+                /* justify-content: center; */
+                /* justify-content: space-between; */
+                /* justify-content: space-evenly; */
+                /* justify-content: space-around; */
+    
+                /* justify-content will justify the content in vertical direction */
+                /* align-items: center ; */
+                /* align-items: flex-end; */
+                /* align-items: flex-start; */
+                /* align-items: stretch; */ 
+            }
+            .item{
+                width: 200px;
+                height: 200px;
+                background-color: tomato;
+                border: 2px solid green;
+                margin: 10px;
+                padding: 3px;
+            }
+    
+            #item-1{
+                /* Flex properties for a flex item */
+                /* Higher the order, later it shows up in the container */
+                /* order: 2; */
+    
+                /* flex-grow: 2;
+                flex-shrink: 2; */
+    
+            }
+            #item-2{
+                /* flex-grow: 3;
+                flex-shrink: 3 ; */
+                flex-basis: 160px;
+                /* when flex-direction is set to row flex-basis: will control width */
+                /* when flex-direction is set to column flex-basis: will control height */
+            }
+            #item-3{
+                /* flex: 2 2 230px; */
+                align-self: flex-start;
+                align-self: flex-end;
+                align-self: center;
+    
+                }
+    
+        </style>
+    </head>
+    <body>
+        <h1>This is Flexbox Tutorial</h1>
+        <div class="container">
+            <div class="item" id="item-1">First Box</div>
+            <div class="item" id="item-2">Second Box</div>
+            <div class="item" id="item-3">Third Box</div>
+            <!- <div class="item" id="item-4">Fourth Box</div>
+            <div class="item" id="item-5">Fifth Box</div>
+            <div class="item" id="item-6">Sixth Box</div> ->
+        </div>
+    </body>
+    </html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container{
+            height: 544px;
+            width: 100%;
+            display: flex; /* Initialize the container as a flex box */
+            border: 2px black solid;
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse;
+            flex-direction: row-reverse; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-wrap: row wrap-reverse; */
+            /* justify-content: center; */
+            /* justify-content: end; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* align-items: stretch; */
+
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            border: 2px blue solid;
+            margin: 10px;
+            padding: 3px;
+        }
+        #item-1{
+            /* order: 2; */
+            /* flex-grow: 12; */
+            /* flex-shrink: 30; */
+        }
+        #item-4{
+            /* order: 9; */
+            /* flex-grow: 2; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 2000px; */
+            /* flex: 2 1 2000px;*/    /* flex-grow flex-shrink flex-basis */
+            /* align-self: flex-start; */
+            /* align-self: flex-end; */
+            /* align-self: center; */
+            
+        }
+    </style>
+
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+        <div class="container">
+            <div class="item" id="item-1">First Box</div>
+            <div class="item" id="item-2">Second Box</div>
+            <div class="item" id="item-3">Third Box</div>
+            <div class="item" id="item-4">Fourth Box</div>
+            <div class="item" id="item-5">Fifth Box</div>
+            <div class="item" id="item-6">Sixth Box</div>
+        </div>
+</body>
+</html>
