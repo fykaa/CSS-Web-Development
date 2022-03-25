@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <svg width="1000" height="600">
+        <circle cx="940" cy="90" r="20" fill="violet" />
+        <rect width="300px" height="100px" x="30" y="50" fill="red" />
+        <line x1="30px" x2="500px" y1="60px" y2="299px" style="stroke:#3915ae"; stroke-linecap:round; stroke-width:20px; />
+        <ellipse cx="500" cy="400" rx="20" ry="70" fill="green" />
+        <polygon points="100 100, 200 200, 300 0" fill="yellow" />
+        <!-- ANIMATIONS -->
+        <rect width="300px" height="100px" x="500px" y="250px" fill="orange">
+            <animate attributeName="x" from="0" to="300" dur="1s" fill="freeze" repeatCount="4"/>
+            <!-- 
+                -attributeName: Specifies which attribute will be affected by the animation
+                -from: Specifies the starting value of the attribute
+                -to: Specifies the ending value of the attribute
+                -dur: Specifies how long the animation runs (duration)
+                -fill: Specifies whether or not the attribute's value should return to its initial value when the animation is finished (Values: "remove" resets the value; "freeze" keeps the “to value” "indefinite" to repeat the animation indefinitely)
+                -repeatCount: Specifies the repeat count of the animation -->
+        </rect>
+        <!-- PATHS -->
+        <path d="M 0 0 L200 200 L200 0 Z" style="stroke:rgb(12, 91, 41); fill:none;" />
+        <path d="M0 0  L0 100 L100 100  L100 0  Z" style="fill:rgb(220, 106, 125)" />
+        <!-- The following commands are available for path data:
+            M: moveto
+            L: lineto
+            H: horizontal lineto
+            V: vertical lineto
+            C: curveto
+            S: smooth curveto
+            Q: quadratic Bézier curve
+            T: smooth quadratic Bézier curveto
+            A: elliptical Arc
+            Z: closepath 
+        M places our "virtual pen" down at the position 0, 0. It then moves 200px down and to the right, then moves up to the position 200, 0. The Z command closes the shape, which results in a hypotenuse
+    
+    
+        All of the above commands can also be expressed with lower case letters. When capital letters are used, it indicates absolute position; lower case indicates relative position.-->
+    </svg>
+</body>
+</html>

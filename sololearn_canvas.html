@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    <!-- The HTML canvas is used to draw graphics that include everything from simple lines to complex graphic objects. The <canvas> element is only a container for graphics. You must use a script to actually draw the graphics (usually JavaScript).The <canvas> element must have an id attribute so it can be referred to by JavaScript. getContext() returns a drawing context on the canva Basic knowledge of JavaScript is required to understand and use the Canvas.-->
+    <canvas id="canvas1" width="200" height="100">
+    </canvas>
+    <script>
+        var can = document.getElementById("canvas1"); 
+        var ctx = can.getContext("2d");
+        ctx.fillRect(20,20,100,100);
+        ctx.fillStyle="green";
+
+     </script>
+     <!-- The HTML canvas is a two-dimensional grid. -->
+
+
+    <!-- Drawing Shapes
+
+
+    The fillRect(x, y, w, h) method draws a "filled" rectangle, in which w indicates width and h indicates height. The default fill color is black.
+
+    A black 100*100 pixel rectangle is drawn on the canvas at the position (20, 20)
+The fillStyle property is used to set a color, gradient, or pattern to fill the drawing.
+Using this property allows you to draw a green-filled rectangle. 
+
+
+The canvas supports various other methods for drawing:
+
+Draw a Line
+moveTo(x,y): Defines the starting point of the line.
+lineTo(x,y): Defines the ending point of the line.
+
+Draw a Circle
+beginPath(): Starts the drawing.
+arc(x,y,r,start,stop): Sets the parameters of the circle.
+stroke(): Ends the drawing.
+
+Gradients
+createLinearGradient(x,y,x1,y1): Creates a linear gradient.
+createRadialGradient(x,y,r,x1,y1,r1): Creates a radial/circular gradient.
+
+Drawing Text on the Canvas
+Font: Defines the font properties for the text.
+fillText(text,x,y): Draws "filled" text on the canvas.
+strokeText(text,x,y): Draws text on the canvas (no fill).
+There are many other methods aimed at helping to draw shapes and images on the canvas.-->
+
+</body>
+</html>
