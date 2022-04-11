@@ -1,0 +1,81 @@
+<!-- Box Shadow and Text Shadow -->
+<!-- 
+    The box-shadow CSS property adds shadow effects around an element’s frame. We can set multiple effects separated by commas. It is described by X and Y offsets relative to the element, blur and spread radius, and colour. The text-shadow CSS property adds a shadow to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations. It is also described by some combination of X and Y offsets from the element, blur radius, and colour.
+
+We will start by writing our HTML code. Here we will make three divs with the class as a card. So the code will be as follows- 
+
+Now let us understand how to apply the box-shadow effect in the CSS. The basic syntax is as-
+
+box-shadow: 10px 13px green;
+If we write the above values in the negative, the shadow will move towards up. In the same way, we can apply the blur-radius property to the boxes. This property is used to make the border blur. The other property is spread-radius. It is used to spread the color around the box. To make all these changes inside the box, we can use the inset property as follows-
+
+  box-shadow: inset 3px 5px green;
+
+Now let us see how to use text-shadow. For this, we will make the changes in the heading tag as follows-
+
+.card h2{
+      text-shadow: 3px 4px red;
+}
+By writing this, you will see the changes as follows-
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box shadow and text shadow</title>
+</head>
+<style>
+    .container {
+        display: flex;
+    }
+
+    .card {
+        padding: 23px 12px;
+        margin: 23px 12px;
+        /* border: 2px solid red; */
+        background-color: burlywood;
+        border-radius: 20px;
+        /* box-shadow: inset -6px -65px 79px 4px green;         box-shadow: offset-x offset-y blur-radius spread-radius color; */
+        box-shadow: 3px 5px green, 4px 6px red;
+    }
+    #card-2{
+        box-shadow: inset -6px -65px 79px 4px green;         /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+    }
+
+    .card h2 {
+        text-shadow: 6px -3px 2px red;  /* x y blur */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is C++ Course</h2>
+            <p>I have started C++ course which does not mean that we will stop this course. We will continue this course
+                to completion. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque laudantium, doloremque
+                enim repellat impedit autem nostrum facilis odio omnis optio voluptates beatae mollitia temporibus
+                voluptas consequuntur harum animi totam molestiae labore architecto ratione qui!</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is HTML Course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis placeat doloribus molestiae velit
+                ipsum, aliquam officia ratione excepturi in officiis, incidunt quo est pariatur tempore ex, distinctio
+                nostrum! Sint non doloribus rem obcaecati sunt.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In tenetur molestiae, placeat quas perferendis
+                quibusdam atque omnis distinctio obcaecati dolor, tempora unde deserunt iure nam. Iste labore eveniet
+                esse deserunt?</p>
+        </div>
+    </div>
+</body>
+
+</html>

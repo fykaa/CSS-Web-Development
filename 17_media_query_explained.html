@@ -1,0 +1,112 @@
+<!--
+    Media Queries Explained
+
+What Is Media Query?
+Media queries are used when we want to customize our website's presentation according to the user's screen size. With the help of media queries, you can display different markups based upon the device's general type(mobile, desktop, tablet).
+A media query is a logical operation. Whenever a media query becomes true, then the related CSS is applied to the target element.
+
+Syntax Of Media Query :
+A media query is composed of two things: media type and expression. A media query can contain one or more expressions. 
+
+Syntax :
+
+@media media-type and (media-feature)
+{
+/* CSS Rules to be applies*/
+}
+
+Example: 
+
+@media screen and (max-width: 800px)
+{
+#contents{width:90%}
+}
+
+Let's understand this example :
+
+@media: A media query always starts with @media.
+Screen: It is the applicable media type.
+max-width: It is the media feature. 
+#contents{width:90%} : It is the CSS to be applied when the conditions are met.
+
+Now, we will spend some time understanding how to use media queries on a website.
+
+First of all, we have used the below CSS to design four divs.
+
+Now, we are changing the display value to display:none; and then we will apply the media queries. Here is the CSS :
+ <style>
+        .box {
+            text-align: center;
+            background-color: rgba(255, 196, 0, 0.959);
+            color: white;
+            font-size: 50px;
+             display: none;
+        }
+ </style>  
+  it's time to apply our very first media query. Here is the CSS used : 
+ @media (min-width: 400px){
+            #box1{
+                display: block;
+            }
+        }
+In the above code, we have applied the media query to id=box1. So, whenever the page's width is 400px or more than 400px, then the display value of the box1 will be changed from display:none; to display:block; and applied CSS will be visible to the user.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS media query</title>
+    <style>
+        .box{
+            text-align: center;
+            background-color: orangered;
+            color: white;
+            font-size: 50px;
+            display: none;
+        }
+        @media (min-width: 800px){
+            #box1{
+                display: block;
+            }
+        }
+        @media only screen and (min-width: 600px){
+            #box2{
+                display: block;
+                background-color: teal; 
+            }
+        }
+        @media (min-width: 500px) and (max-width:800px) {
+            #box3{
+                display: block;
+                color: black;
+                background-color: yellow;
+            }
+        }
+
+        @media (min-width: 800px)  {
+            #box4{
+                display: block;
+                background-color: green;
+            }
+        }
+        @media (max-width: 800px){
+            #boxx{
+
+                display: block;
+                background-color: red;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">Windows</div>
+    <div class="box" id="box2">MacOS</div>
+    <div class="box" id="box3">Kali Linux</div>
+    <div class="box" id="box4">Android</div>
+    <div id="boxx" class="box">HELLO WORLD</div>
+</body>
+</html>

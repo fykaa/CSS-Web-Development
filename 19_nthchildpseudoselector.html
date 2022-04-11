@@ -1,0 +1,78 @@
+<!-- Attribute & nth child pseudo Selector -->
+<!-- In the last tutorial, we have discussed different pseudo-selectors in CSS. Here, we are going to learn some more advanced pseudo-selectors that will benefit a lot in web development
+
+We will create a very basic form by writing the HTML code as below
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth child Pseudo Selector</title>
+    <style>
+        input{
+            display: block;
+        }
+        .container{
+            display: block;
+            width: 233px;
+            margin: auto;
+        }
+        input[type='text'] {
+            padding: 23px;
+            border: 2px solid red;
+        }
+        input[type='email']{
+            border: 3px solid black;
+        }
+        li:nth-child(4){
+            color: cyan;
+        }
+        li:nth-child(3n+3){
+            color: pink;
+        }
+        li:nth-child(even) {
+            background-color: yellow;
+        }
+        li:nth-child(odd){
+            color: orangered;
+        }
+        a[target] {
+            font-size: 44px;
+            color: violet;
+        }
+
+        a[target='_self'] {
+            font-size: 14px;
+            color: rgb(13, 22, 151);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Go to google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to Facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter Name">
+            <input type="email" placeholder="Enter Email">
+            <input type="password" placeholder="Enter password">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">1</li>
+            <li class="item" id="item-2">2</li>
+            <li class="item" id="item-3">3</li>
+            <li class="item" id="item-4">4</li>
+            <li class="item" id="item-5">5</li>
+            <li class="item" id="item-6">6</li>
+            <li class="item" id="item-7">7</li>
+            <li class="item" id="item-8">8</li>
+            <li class="item" id="item-9">9</li>
+            <li class="item" id="item-10">10<liv>
+        </ul>
+    </div>
+</body>
+</html>

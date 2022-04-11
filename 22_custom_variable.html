@@ -1,0 +1,142 @@
+<!-- Variables & Custom Properties -->
+<!-- Now we will understand the concept of variables. Suppose, we want to create a variable for the background color. We can create it by ‘--’ symbol. Variables in CSS helps us to assign the same properties to different elements. Let us analyze it with the code given below-
+
+
+.box{
+            --box-color: violet;
+            width:200px;
+            height: 200px;
+            background-color: var(--box-color);
+            border: 2px solid var(--box-color);
+            box-shadow: 3px 3px var(--box-color);
+            margin: 2px 9px;
+        }
+    The important point to remember about these variables is it can be used within its scope only. To make it work, we can write it again or can use the --root property. 
+    
+    To make it understand clearer, we can make a global variable in terms of programming language. Let us understand the code below-
+    :root{
+            --primary-color: blue;
+            --danger-color: red;
+            --maxw: 333px;
+        }
+
+    Any custom properties written in the root variable can be accessed anywhere in the code. In most of the cases, we use primary color and danger color as shown in the above example. We have to modify the violet color with the primary color and danger color in the box class as follows-
+
+    .box{
+            width:200px;
+            height: 200px;
+            background-color: var(--primary-color);
+            border: 2px solid var(--danger-color);
+            box-shadow: 3px 3px var(--box-color);
+            margin: 2px 9px;
+        }
+
+    Now let us modify the container and add the maxw property in it from the root with additional some properties. 
+    The code is as follows-
+
+ .container{ 
+            max-width: var(--maxw);
+            margin: auto;
+            background-color: var(--danger-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: var(--box-color); */
+        }
+
+So, I believe you must have understood the concepts of variables and custom properties in CSS and how they can be used to minimize our efforts. For more interesting upcoming tutorials, kindly stay tuned and keep practicing
+    -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        :root{
+            --primary-color: blue;
+            --danger-color: red;
+            --maxw: 333px;
+        }
+        .container {
+            max-width: var(--maxw);
+            margin: auto;
+            background-color: var(--danger-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: var(--box-color); */
+        }
+        .box {
+            --box-color: violet;
+            --box-border: orange;
+            --boxshadow: green;
+            width:200px;
+            height: 200px;
+        /*  background-color: var(--box-color);
+            border: 2px solid var(--box-border);
+            box-shadow: 3px 3px var(--boxshadow); */
+            background-color: var(--primary-color);
+            border: 2px solid var(--danger-color);
+            box-shadow: 3px 3px var(--box-color);
+            margin: 2px 9px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Variables/Custom Properties</title>
+    <style>
+        :root{
+            --primary-color: blue;
+            --danger-color: red;
+            --maxw: 333px;
+        }
+        .box{
+            width:200px;
+            height: 200px;
+            background-color: var(--primary-color);
+            border: 2px solid var(--danger-color);
+            box-shadow: 3px 3px var(--box-color);
+            margin: 2px 9px;
+        }
+        .container{ 
+            max-width: var(--maxw);
+            margin: auto;
+            background-color: var(--danger-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: var(--box-color); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html> -->
