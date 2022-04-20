@@ -22,14 +22,15 @@ So I hope you have understood how to decide the minimum and maximum width of a r
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CSS Grid</title>
+    <title>Autofit Minmax</title>
     <style>
         .container{ 
             display: grid; 
             grid-gap: 1rem;
             /* grid-template-columns: 112px 112px 112px;  */
             /* grid-template-columns: 1fr 1fr 1fr;  */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    
+                    /* that is based on screen size minm column size is 300px and max is 1fr */
             /* The benefit of auto-fit is that it will repeat the number of times it is necessary. The minmax will decide the minimum width given to any rows.*/
             /* justify-content: center;  */
         }

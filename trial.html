@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tutorials</title>
+    <title>Document</title>
     <style>
-        .container{
+        .container {
             display: grid;
-            /* grid-template-columns: 200px 100px 500px; */
-            /* grid-template-rows: 1fr 3fr auto; */
-            grid-template-rows: repeat(5, 3fr);
+            grid-gap: 2rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer'
+            ;
 
-
-
-
-            grid-row-gap: 2rem;
-            grid-column-gap: 4rem;
         }
-        .box{
-            background-color: pink;
+
+        .navbar {
+            background-color: red;
             border: 2px black solid;
-            width: 100px;
-            height: 100px;
+            padding: 20px;
+            grid-area: navbar;
         }
 
+        .section {
+            background-color: rgb(107, 70, 70);
+            border: 2px black solid;
+            padding: 20px;
+            grid-area: section;
+        }
+
+        .aside {
+            background-color: rgb(58, 87, 48);
+            border: 2px black solid;
+            padding: 20px;
+            grid-area: aside;
+        }
+        footer{
+            background-color: rgb(58, 87, 48);
+            border: 2px black solid;
+            padding: 20px;
+            grid-area: footer;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="box" id="box1">1</div>
-        <div class="box" id="box2">2</div>
-        <div class="box" id="box3">3</div>
-        <div class="box" id="box4">4</div>
-        <div class="box" id="box5">5</div>
-        <div class="box" id="box6">6</div>
-        <div class="box" id="box7">7</div>
-        <div class="box" id="box8">8</div>
-        <div class="box" id="box9">9</div>
-        <div class="box" id="box10">10</div>
+        <div class="navbar"> Navbar Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ullam explicabo
+            dicta iure tempore suscipit quisquam beatae magni odio officiis.</div>
+
+        <div class="section">Section Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi autem ipsa neque
+            similique commodi repellendus sapiente voluptate minima doloremque dignissimos eveniet, quo, incidunt unde.
+            Necessitatibus fugiat deleniti nam perspiciatis dolores in, commodi ipsum possimus nostrum. Fugit quo
+            commodi esse impedit dolore ducimus quasi corrupti, voluptatum dicta, veritatis soluta harum aspernatur hic
+            nulla repellat molestiae, voluptates consequuntur aliquam! Aliquid necessitatibus ipsum, consectetur
+            voluptates culpa id architecto voluptatum animi nemo aut, expedita vero doloribus ad repudiandae a optio,
+            magnam quo! Accusamus, asperiores iusto. Error tempora rerum ad necessitatibus? Repellat enim reiciendis
+            maxime voluptatibus nulla fuga tempora, reprehenderit temporibus obcaecati ab suscipit doloremque explicabo
+            veritatis a nesciunt sit quasi, eligendi, hic repudiandae quaerat velit. Ex quas fuga reiciendis optio. Eum
+            eveniet dolorum molestias officiis exercitationem voluptatum sequi saepe repellendus vitae esse, numquam
+            autem quisquam aspernatur rem consequatur odit enim quod deserunt quibusdam omnis eius. Nihil, expedita! Ad
+            dolore quam sed neque nobis deserunt alias accusamus quaerat inventore voluptas corrupti quisquam eum nemo,
+            ullam facilis exercitationem error reprehenderit assumenda excepturi, numquam qui adipisci aliquid veniam.
+            Eius voluptatibus illum numquam ducimus non expedita. Libero aliquid hic beatae, ipsa iusto excepturi odit
+            repudiandae adipisci quibusdam voluptatem, odio quas aut impedit voluptas. Porro totam labore expedita ad?
+        </div>
+
+        <div class="aside">Aside Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt mollitia quidem modi
+            veritatis asperiores corrupti at earum molestias laboriosam ducimus, deleniti labore maiores, laborum
+            dolorum explicabo accusamus voluptate nemo nam.</div>
     </div>
+    <footer class="footer">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit laboriosam debitis esse architecto ullam aliquid repudiandae voluptates illo iusto nesciunt. Obcaecati sint cum facere amet accusantium quod perspiciatis quas eum!
+    </footer>
 </body>
+
 </html>
