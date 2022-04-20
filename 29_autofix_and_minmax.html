@@ -1,0 +1,60 @@
+<!-- Autofit & MinMax -->
+
+<!--
+    grid-template-column: 1fr 1fr 1fr;
+    It will only set all the grids in 3 columns irrespective of the screen size. But if we want that all the grids should behave according to the screen size and adjust its size according to different devices, then we have to make them responsive. It means if the user is viewing our website on a mobile phone, he should see the number of rows less as compared while he is watching on a larger screen. So for that, we have to define our container as follows-
+
+.container{ 
+            display: grid; 
+            grid-gap: 1rem;
+            /* grid-template-columns: 112px 112px 112px;  */
+            /* grid-template-columns: 1fr 1fr 1fr;  */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* justify-content: center;  */
+        }
+The benefit of auto-fit is that it will repeat the number of times it is necessary. The minmax will decide the minimum width given to any rows.
+
+So I hope you have understood how to decide the minimum and maximum width of a row and make it responsive. You should keep practicing all the codes learned till now to make build your knowledge.  
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid</title>
+    <style>
+        .container{ 
+            display: grid; 
+            grid-gap: 1rem;
+            /* grid-template-columns: 112px 112px 112px;  */
+            /* grid-template-columns: 1fr 1fr 1fr;  */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            /* The benefit of auto-fit is that it will repeat the number of times it is necessary. The minmax will decide the minimum width given to any rows.*/
+            /* justify-content: center;  */
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(245, 187, 101);
+            padding: 34px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+        <div class="box">Item-7</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-9</div>
+        <div class="box">Item-10</div>
+        <div class="box">Item-11</div>
+        <div class="box">Item-12</div>
+        <div class="box">Item-13</div>
+    </div>
+</body>
+</html>

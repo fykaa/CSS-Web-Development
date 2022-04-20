@@ -1,0 +1,110 @@
+<!-- SPANNING Multiple Rows and Columns in Grid -->
+<!-- meh-zaye-iki -->
+
+<!-- we want that item of numbers 1,2,6 and 7 should we treated as one block.
+
+For doing this we can use the property called grid row start and end. If we write the code as follows-
+
+.box:first-child{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+}
+
+With the help of this property, we can create extremely good layouts for our websites and it will be going to benefit us a lot in the future also for designing sidebars on the website.
+
+However, for the above code, there is a shortcut method also. It does not allow you to write the long code as above. The code is as follows-
+
+box:first-child{
+       
+        grid-column: 1 / span 3;
+        grid-row: 1 / span 3;
+    }
+
+
+
+    One of the most confusion which now arises is what amongst floats, flexbox or grids should we use? The simple answer is, you are free to use any three of them irrespective of your website should look good and responsive and you should be comfortable with the development. You must always try to give the best user experience because it’s the most important part of SEO.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPANNING Multiple Rows and Columns in Grid</title>
+    <style>
+        .item {
+            border: 2px solid black;
+            background-color: rgb(228, 188, 228);
+            padding: 23px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-gap: 1rem;
+            grid-column-gap: 7rem;
+            grid-row-gap: 1rem;
+        }
+
+        /* .item:first-child {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        } */
+
+        /* OR */
+        /* .item:first-child {
+            grid-column: 1 / span 3;
+            grid-row: 1 / span 3;
+        } */
+
+        .item:first-child{
+            grid-column-start: 5;
+            grid-column-end: 9;
+            grid-row-start: 2;
+            grid-row-end: 6;
+            /* THESE BOTH WILL WORK THE SAME, span means how many grids to cover after start position */
+            /* grid-column: 5 / span 4;
+            grid-row: 2 / span 4; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">This is item - 1</div>
+        <div class="item">This is item - 2</div>
+        <div class="item">This is item - 3</div>
+        <div class="item">This is item - 4</div>
+        <div class="item">This is item - 5</div>
+        <div class="item">This is item - 6</div>
+        <div class="item">This is item - 7</div>
+        <div class="item">This is item - 8</div>
+        <div class="item">This is item - 9</div>
+        <div class="item">This is item - 10</div>
+        <div class="item">This is item - 11</div>
+        <div class="item">This is item - 12</div>
+        <div class="item">This is item - 13</div>
+        <div class="item">This is item - 14</div>
+        <div class="item">This is item - 15</div>
+        <div class="item">This is item - 5</div>
+        <div class="item">This is item - 6</div>
+        <div class="item">This is item - 7</div>
+        <div class="item">This is item - 8</div>
+        <div class="item">This is item - 9</div>
+        <div class="item">This is item - 10</div>
+        <div class="item">This is item - 11</div>
+        <div class="item">This is item - 12</div>
+        <div class="item">This is item - 13</div>
+        <div class="item">This is item - 14</div>
+        <div class="item">This is item - 15</div>
+    </div>
+</body>
+
+</html>
