@@ -1,81 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container {
+        body{
+            background-color: brown;
+        }
+        .container{
             display: grid;
             grid-gap: 2rem;
-            grid-template-areas:
-                'navbar navbar navbar navbar'
-                'section section section aside'
-                'footer footer footer footer'
-            ;
 
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
         }
 
-        .navbar {
-            background-color: red;
-            border: 2px black solid;
-            padding: 20px;
+        @media  only screen and (max-width:300px) {
+            body{
+                background-color: rgb(0, 8, 255);
+            }
+        }
+        @media only screen and (min-width:300px) and (max-width:500px){
+            body{
+                background-color: rgb(190, 176, 51);
+            }
+            .aside{
+                display: none;
+            }
+        }
+        
+
+        #box{
+            border: 2px solid black;
+            background-color: yellow;
+            padding: 12px;
+        }
+        .navbar{
             grid-area: navbar;
         }
-
-        .section {
-            background-color: rgb(107, 70, 70);
-            border: 2px black solid;
-            padding: 20px;
+        .section{
             grid-area: section;
         }
-
-        .aside {
-            background-color: rgb(58, 87, 48);
-            border: 2px black solid;
-            padding: 20px;
+        .aside{
             grid-area: aside;
         }
         footer{
-            background-color: rgb(58, 87, 48);
-            border: 2px black solid;
-            padding: 20px;
             grid-area: footer;
         }
+
     </style>
 </head>
-
 <body>
     <div class="container">
-        <div class="navbar"> Navbar Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt ullam explicabo
-            dicta iure tempore suscipit quisquam beatae magni odio officiis.</div>
-
-        <div class="section">Section Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi autem ipsa neque
-            similique commodi repellendus sapiente voluptate minima doloremque dignissimos eveniet, quo, incidunt unde.
-            Necessitatibus fugiat deleniti nam perspiciatis dolores in, commodi ipsum possimus nostrum. Fugit quo
-            commodi esse impedit dolore ducimus quasi corrupti, voluptatum dicta, veritatis soluta harum aspernatur hic
-            nulla repellat molestiae, voluptates consequuntur aliquam! Aliquid necessitatibus ipsum, consectetur
-            voluptates culpa id architecto voluptatum animi nemo aut, expedita vero doloribus ad repudiandae a optio,
-            magnam quo! Accusamus, asperiores iusto. Error tempora rerum ad necessitatibus? Repellat enim reiciendis
-            maxime voluptatibus nulla fuga tempora, reprehenderit temporibus obcaecati ab suscipit doloremque explicabo
-            veritatis a nesciunt sit quasi, eligendi, hic repudiandae quaerat velit. Ex quas fuga reiciendis optio. Eum
-            eveniet dolorum molestias officiis exercitationem voluptatum sequi saepe repellendus vitae esse, numquam
-            autem quisquam aspernatur rem consequatur odit enim quod deserunt quibusdam omnis eius. Nihil, expedita! Ad
-            dolore quam sed neque nobis deserunt alias accusamus quaerat inventore voluptas corrupti quisquam eum nemo,
-            ullam facilis exercitationem error reprehenderit assumenda excepturi, numquam qui adipisci aliquid veniam.
-            Eius voluptatibus illum numquam ducimus non expedita. Libero aliquid hic beatae, ipsa iusto excepturi odit
-            repudiandae adipisci quibusdam voluptatem, odio quas aut impedit voluptas. Porro totam labore expedita ad?
-        </div>
-
-        <div class="aside">Aside Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt mollitia quidem modi
-            veritatis asperiores corrupti at earum molestias laboriosam ducimus, deleniti labore maiores, laborum
-            dolorum explicabo accusamus voluptate nemo nam.</div>
+        <div id="box" class="navbar">Navbar</div>
+        <div id="box" class="section">Section Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat accusantium officia maiores voluptatum harum facilis id ullam ex quo itaque, magni recusandae perspiciatis vero iusto volupta Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sequi, illum ratione est quibusdam repellendus expedita cum quod! Consequatur, porro id delectus cum perspiciatis accusamus amet repellendus tempore, eligendi incidunt quo. Reiciendis quis temporibus iusto perferendis, consequuntur consectetur autem placeat. tibus assumenda, impedit et, explicabo suscipit nulla beatae expedita cupiditate? Dolorum aspernatur ea velit, amet, ipsam commodi obcaecati dolore maiores quia, voluptatum quis necessitatibus!</div>
+        <div id="box" class="aside">Aside Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, atque! Perspiciatis id delectus tempore dolorem dignissimos omnis debitis, corrupti perferendis!</div>
     </div>
-    <footer class="footer">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit laboriosam debitis esse architecto ullam aliquid repudiandae voluptates illo iusto nesciunt. Obcaecati sint cum facere amet accusantium quod perspiciatis quas eum!
-    </footer>
+    <footer id="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere fuga illo soluta unde magni ipsa accusantium enim esse modi!</footer>
 </body>
-
 </html>
